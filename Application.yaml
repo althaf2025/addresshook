@@ -16,7 +16,7 @@ spec:
       - name: project-k8s-new
         image: althaf2025/addressbook-project-kubernate:latest
         ports:
-        - containerPort: 8087
+        - containerPort: 8080
 
 ---
 apiVersion: v1
