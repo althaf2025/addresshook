@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: project-k8s
-        image: project-k8s-addressbook:latest
+        image: althaf2025/addressbook-project-kubernate:latest
         ports:
         - containerPort: 8080  
 
