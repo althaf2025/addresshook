@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-k8s-deployment
+  name: project-k8s-deployment-new
 spec:
   replicas: 3 
   selector:
     matchLabels:
-      app: project-k8s
+      app: project-k8s-new
   template:
     metadata:
       labels:
-        app: project-k8s
+        app: project-k8s-new
     spec:
       containers:
-      - name: project-k8s
+      - name: project-k8s-new
         image: althaf2025/addressbook-project-kubernate:latest
         ports:
-        - containerPort: 8082  
+        - containerPort: 8087
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-k8s-service
+  name: project-k8s-new-service
 spec:
   type: LoadBalancer
   selector:
-    app: project-k8s
+    app: project-k8s-new
   ports:
   - protocol: TCP
     port: 80
